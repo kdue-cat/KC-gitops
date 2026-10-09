@@ -22,6 +22,11 @@ runs:
       # $HOME/.fleetctl, not any user-supplied value, so it cannot inject a path.
       run: | # zizmor: ignore[github-env]
         FLEET_URL="$(printf '%s' "$FLEET_URL" | sed 's:/*$::')"
+
+        echo "DEBUG: Fleet version API response:"
+        curl "$FLEET_URL/api/v1/fleet/version" --header "Authorization: Bearer $FLEET_API_TOKEN" --insecure
+        echo ""
+
         FLEET_VERSION="$(curl "$FLEET_URL/api/v1/fleet/version" --header "Authorization: Bearer $FLEET_API_TOKEN" --fail --silent --insecure | jq --raw-output '.version')"
         DEFAULT_FLEETCTL_VERSION="latest"
 
@@ -62,3 +67,4 @@ runs:
         FLEET_DRY_RUN_ONLY: ${{ inputs.dry-run-only }}
         FLEET_DELETE_OTHER_FLEETS: ${{ inputs.delete-other-fleets }}
       run: ./.github/fleet-gitops/gitops.sh
+      
