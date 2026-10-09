@@ -1,4 +1,4 @@
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+n# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
 # default.yml
 #
@@ -13,7 +13,7 @@
 
 org_settings:
   fleet_desktop:
-    trasparency_url: https://catoftheday.com
+    transparency_url: https://catoftheday.com
   org_info:
     ###########################################################
     # The name of your organization is displayed to end users
