@@ -28,7 +28,7 @@ permissions:
 
 jobs:
   fleet-gitops:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout this repository
         uses: actions/checkout@v6
