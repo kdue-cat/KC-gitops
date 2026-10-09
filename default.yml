@@ -12,6 +12,8 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 org_settings:
+  fleet_desktop:
+    trasparency_url: https://catoftheday.com
   org_info:
     ###########################################################
     # The name of your organization is displayed to end users
@@ -21,7 +23,7 @@ org_settings:
     # Read more:
     #   • https://fleetdm.com/docs/configuration/yaml-files#org-info
     ###########################################################
-    org_name: Kitty House
+    org_name: Poppy Party
 
   server_settings:
     ###########################################################
